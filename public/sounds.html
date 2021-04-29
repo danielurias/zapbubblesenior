@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div id="nav-area">
+      <div id="lo">
+        <img id="logo" src="zapbubble.svg">
+      </div>
+      <nav>
+      <ul>
+          <li><strong><a href="index.html">Home</a></strong></li>
+          <li><strong><a id="active" href='sounds.html'>Sounds</a></strong></li>
+          <li><strong><a href='collection.html'>My Collection</a></strong></li>
+      </ul>
+      </nav>
+    </div>
+    <h1 id="h1">Sounds</h1>
+    <div id="descimg">
+    <div id="desc">
+      <p id="up">Enjoy the free collection of sounds.</p>
+          <p id="up2">
+          • All sounds come from registered users.<br>
+          • Listen to each individual sound or search for one.<br>
+          • Unlimited downloads.<br>
+          • No account needed. 
+          </p>
+    </div>
+    </div>
+    <div id="app">
+      <div id="search">
+        <input type="text" v-model="search" placeholder="Search..">
+      </div>
+      <div id="list">
+      <ol>
+        <li id="li" v-for="sound in filteredSounds">
+          <div id="name"><strong>{{ sound.name }}</strong></div>
+          <div id="date"><strong>{{ sound.date }}</strong></div>
+          <audio controls>
+            <source :src="sound.audioUrl" type="audio/wav">
+          </audio>
+        </li>
+      </ol>
+      </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

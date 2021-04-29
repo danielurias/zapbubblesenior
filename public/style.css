@@ -1,0 +1,589 @@
+* {
+    font-family: Avenir;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212121;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns:1fr 800px 1fr;
+}
+
+h1 {
+    color: #FBD400;
+    text-align: center;
+    grid-column-start: 2;
+}
+
+h2 {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    grid-column-start: 2;
+}
+
+nav {
+    margin-top: 5px;
+    grid-column-start: 3;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;   
+}
+
+#nav-area {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns:1fr 100px 700px 1fr;
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+nav ul li {
+    display: inline;
+    list-style: none;
+}
+
+nav ul li a {
+    padding-left: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#image {
+    background-image: url("yellowanimation.gif");
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 300px;
+    margin-top: 10px;
+}
+
+#image img{
+    height: 243px;
+    border-radius: 10px;
+}
+
+#li {
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#list {
+    text-align: center;
+    grid-column-start: 2;
+    padding-bottom: 60px;
+}
+
+#inputs {
+    text-align: center;
+    grid-column-start: 2;
+}
+
+#lo {
+    grid-column-start: 2;
+    display: flex;
+    justify-self: flex-start;
+}
+
+#logo {
+    height: 40px;
+    width: auto;
+}
+
+#name {
+    padding-bottom: 10px;
+    color: #FBD400;
+}
+
+#date {
+    font-size: 12px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+#app {
+    grid-column-start: 2;
+}
+
+ol {
+    list-style: none;
+}
+
+#input1 {
+    display: flex;
+    justify-content: center;
+}
+
+#inputd {
+    display: flex;
+    justify-content: center;
+}
+
+#input1 button {
+    outline-style: none;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 45px;
+    padding-left: 45px;
+    border-radius: 5px;
+}
+
+#input1 button:focus {
+    outline: none;
+}
+
+#input2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#cont {
+    margin-left: 172px;
+    margin-right: 172px;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#h1 {
+    margin-top: 30px; 
+    color: white;
+}
+
+#p1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    color: white;
+    font-size: 16px;
+}
+
+#log button {
+    color: white;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+#sign button {
+    color: black;
+    margin-left: 10px;
+    background-color: #FBD400;
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+#p2 {
+    color: white;
+    text-align: center;
+}
+
+#p3 {
+    margin-left: 15px;
+    color: black;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+#error {
+    margin-left: 172px;
+    margin-right: 172px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#error li{
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+#contsound {
+    margin-top: 25px;
+    grid-column-start: 2;
+    background-color: black;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#signp p{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#signb {
+    display: flex;
+    justify-content: center;
+}
+
+#signb button {
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#soundsb {
+    display: flex;
+    justify-content: center;
+}
+
+#soundsb button {
+    padding: 10px 20px;
+    color: black;
+    background-color: #FBD400;
+    border-radius: 5px;
+}
+
+#logout {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+#logout button {
+    padding: 5px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#download i{
+    padding-top: 10px;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#search input {
+    font-size: 24px;
+    padding: 0px 70px;
+}
+
+#register {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin-left: 172px;
+    margin-right: 172px;
+    border-radius: 10px;
+}
+
+#first-name {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#last-name {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#email {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#password {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#username {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#passw {
+    padding: 5px 0px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#b1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+#b1 button {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    height: 40px;
+    width: 100px;
+  }
+
+#b2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+#b2 button {
+    border-radius: 5px;
+    color: black;
+    background-color: #FBD400;
+    font-size: 16px;
+    height: 40px;
+    width: 100px;
+  }
+
+#login {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin-top: 20px;
+    margin-left: 172px;
+    margin-right: 172px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+  }
+
+#pw {
+    text-align: center;
+    padding-top: 10px;
+    grid-column-start: 2;
+    color:#FBD400;
+    font-size: 22px;
+}
+
+#register input {
+    border-color: black;
+    text-align: center;
+}
+
+#login input {
+    border-color: black;
+    text-align: center;
+}
+
+#regp{
+    padding-top: 10px;
+    color: white;
+    font-size: 14px;
+    margin-left: 80px;
+    font-weight: bold;
+}
+
+#up {
+    margin-top: 20px;
+    grid-column-start: 2;
+    color: #FBD400;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#up2 {
+    margin-top: 10px;
+    grid-column-start: 2;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+#ps {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#pu {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#input1 input {
+    margin-bottom: 10px;
+    padding: 5px 50px;
+    border-color: black;
+    text-align: center;
+}
+
+#inputd input {
+    padding: 5px 50px;
+    border-color: black;
+    text-align: center;
+}
+
+#desc {
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding-top: 20px;
+    grid-column-start: 2;
+    background-color: black;
+}
+
+#descimg {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 550px 1fr;
+    background-image: url("music.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#desc2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    grid-column-start: 2;
+    margin-left: 45px;
+    margin-right: 45px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+#descimg2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 550px 1fr;
+    background-image: url("turntable.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#reg {
+    margin-top: 20px;
+    grid-column-start: 2;
+    color: #FBD400;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#reg2 {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+#up {
+    margin-top: 10px;
+    grid-column-start: 2;
+    color: #FBD400;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#up2 {
+    margin-top: 10px;
+    grid-column-start: 2;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+#intro {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    grid-column-start: 2;
+    margin-left: 45px;
+    margin-right: 45px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+#enjoy {
+    color: white;
+    font-size: 16px;
+}
+
+#fname {
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav ul li a:hover {
+    color: #FBD400;
+}
+
+#active {
+    color: #FBD400;
+}
+
+#pic {
+    padding-top: 30px;
+    grid-column-start: 2;
+    display: flex;
+    justify-content: center;
+}
+
+#pic img{
+    height: 70px;
+    width: auto;
+}
+

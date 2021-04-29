@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="nav-area">
+        <div id="lo">
+          <img id="logo" src="zapbubble.svg">
+        </div>
+        <nav>
+          <ul>
+            <li><strong><a href="index.html">Home</a></strong></li>
+            <li><strong><a href='sounds.html'>Sounds</a></strong></li>
+            <li><strong><a id="active" href='collection.html'>My Collection</a></strong></li>
+          </ul>
+        </nav>
+      </div>
+      <h1 id="h1">My Collection</h1>
+      <div id="app">
+        <div id="userView" v-if="login">
+          <div id="descimg2">
+            <div id="desc2">
+              <p id="reg">Register now to take advantage of these features:</p>
+              <p id="reg2">• Upload MP3/WAV files to the public collection anytime.<br>
+              • Keep your own collection stored in one place.<br>
+              • Search within your collection.
+              </p>
+            </div>
+          </div>
+          <div v-if="errorRegister.length > 0">
+            <ol>
+              <div id="error">
+                <p id="p3">There was a problem creating your account:</p>
+                <li v-bind:style="activeColor" v-for="error in errorRegister">
+                  {{ error }}
+                </li>
+              </div>
+            </ol>
+          </div>
+          <div id='register'>
+            <p id="ps">Sign Up</p>
+            <p id="regp">First Name</p>
+            <input type='text' id='first-name' v-model="userfName" placeholder="First Name">  
+            <p id="regp">Last Name</p>       
+            <input type='text' id='last-name' v-model="userlName" placeholder="Last Name">     
+            <p id="regp">Username</p>        
+            <input type='text' id='email' v-model="userName" placeholder="Username">
+            <p id="regp">Password</p>               
+            <input type='password' id='password' v-model="userPassword" placeholder="Password">
+            <div id="b2">
+              <button v-on:click="createUser"><strong>Register</strong></button>
+            </div>
+          </div>
+          <div v-if="errorLogin.length > 0">
+            <ol>
+              <div id="error">
+                <p id="p3">There was a problem loggin in:</p>
+                <li v-bind:style="activeColor" v-for="error in errorLogin">
+                  {{ error }}
+                </li>
+              </div>
+            </ol>
+          </div>
+          <div id='login'>
+            <p id="ps">Log In</p>
+            <p id="regp">Username</p>             
+            <input type='text' id='username' v-model="user" placeholder="Username">
+            <p id="regp">Password</p>             
+            <input type='password' id='passw' v-model="pass" placeholder="Password">
+            <div id="b2">
+              <button v-on:click="loginUser"><strong>Login</strong></button>
+            </div>
+          </div>
+        </div>
+        <div v-if="before">
+          <div id="descimg2">
+            <div id="intro">
+              <div id="pw">
+                <p><strong>Welcome {{ displayName }} </strong></p>
+              </div>
+              <p id="enjoy">Enjoy you own collection of audio. You have the freedom
+              to upload to the public collection while keeping track and managing your own uploads.
+              </p>
+              <div id="logout">
+                <button v-on:click="logoutUser"><strong>Logout</strong></button>
+              </div>
+            </div>
+          </div>
+          <div v-if="errorMessages.length > 0">
+            <ol>
+              <div id="error">
+                <p id="p3">There was a problem uploading.</p>
+                <li v-bind:style="activeColor" v-for="error in errorMessages">
+                {{ error }}
+                </li>
+              </div>
+            </ol>
+          </div>
+          <div id="cont">
+            <p id="pu">Upload MP3/WAV</p>
+            <p id="fname">File Name</p>
+            <div id="input1">
+              <input type="text" v-model="name" placeholder="Name file"><br>
+            </div>
+            <p id="fname">Date</p>
+            <div id="inputd">
+              <input type="text" v-model="date" placeholder="00/00/00"><br>
+            </div>
+            <div id="input2">
+              <input type="file" v-on:change="selectFile($event)">
+            </div>
+            <div id="input1">
+              <button v-on:click="sendFile()"><strong>Upload</strong></button>
+            </div>
+          </div>
+          <div id="search">
+            <input type="text" v-model="search" placeholder="Search..">
+          </div>
+        </div>
+        <div id="list">
+          <ol>
+            <li id="li" v-for="audio in filteredAudios">
+            <div id="name"><strong>{{ audio.name }}</strong></div>
+            <div id="date"><strong>{{ audio.date }}</strong></div>
+            <audio controls>
+              <source :src="audio.audioUrl" type="audio/wav">
+            </audio>
+            <div id="download">
+              <div id="b1">
+                <button type="button" @click="deleteSound(audio)">Delete</button>
+              </div>
+            </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
