@@ -14,7 +14,7 @@ Attributes:
 
 Attributes:
 
-* email (string)
+* userName (string)
 * firstName (string)
 * lastName (string)
 * encryptedPassword (string
@@ -28,7 +28,7 @@ fileName: STRING,
 audioUrl: STRING,
 user: mongoose.Schema.Types.ObjectID});
 User ({
-email: String,
+userName: String,
 firstName: String,
 lastName: String,
 encryptedPassword: String})
