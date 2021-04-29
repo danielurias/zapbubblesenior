@@ -20,9 +20,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 aws.config.update({
-  accessKeyId: "AKIAIEDVJZ5Z43PCONCQ",
-  secretAccessKey: "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",
-  region: 'us-west-1'
+  accessKeyId: "",
+  secretAccessKey: "",
+  region: ''
 });
 
 const s3 = new aws.S3();
