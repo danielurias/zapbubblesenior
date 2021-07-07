@@ -1,4 +1,4 @@
-# Zapbubble Audio Downlaod & Upload
+# Zapbubble Audio Download & Upload
 
 This project consists of a Nodejs server and a Vuejs frontend. The main purpose of this
 web app is to have the option to download free wav/mp3 files from a public collection and allow
